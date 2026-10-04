@@ -3,87 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Header and Footer</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .navbar a:hover {
-            background-color: green;
-        }
-
-        .main {
-            padding: 16px;
-            margin-top: 50px;
-            margin-bottom: 60px;
-            min-height: 1500px;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-    </style>
+    <title>Trang Chủ Giản Lược</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
+    <header class="main-header">
+        <h1>Tiêu đề Trang Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="main">
-        <h1 id="home">Fixed Header and Footer</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <p>The navigation bar will stay at the top while scrolling.</p>
-        <p>The footer will stay at the bottom of the screen.</p>
+    <div class="page-container">
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </aside>
 
-        <h2 id="news">News</h2>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
+        <main class="main-content">
+            <h2>Nội dung chính của trang</h2>
+            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.</p>
+        </main>
 
-        <h2 id="contact">Contact</h2>
-        <p>You can contact us for more information.</p>
-        <p>Some text some text some text some text...</p>
-
-        <h2 id="about">About</h2>
-        <p>This is a simple website using fixed header and footer.</p>
-        <p>Some text some text some text some text...</p>
-    </div>
-
-    <div class="footer">
-        Fixed Footer - Copyright 2026
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
+        </aside>
     </div>
 
 </body>
