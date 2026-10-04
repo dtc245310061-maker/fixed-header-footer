@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế Giới Hoạt Hình</title>
+    <link rel="stylesheet" href="cartoon.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Thế Giới Hoạt Hình</h1>
+        <nav class="head-link">
+            <a href="#">Trang chủ</a>
+            <a href="#">Phim mới</a>
+            <a href="#">Thể loại</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="left-content">
+            <h2>Danh sách phim</h2>
+
+            <button class="movie active"
+                onclick="playMovie('video')">
+                1. Phim hoạt hình mẫu
+            </button>
+
+            <button class="movie"
+                onclick="playMovie('youtube')">
+                2. Big Buck Bunny
+            </button>
+
+            <h3>Tiêu chí phim</h3>
+            <p>Phim phù hợp với trẻ em</p>
+            <p>Thuyết minh tiếng Việt</p>
+            <p>Chất lượng HD 720p - Full HD 1080p</p>
+        </div>
+
+        <div class="right-content">
+            <h2 id="movie-title">Phim hoạt hình mẫu</h2>
+
+            <div id="video-player">
+                <video controls width="100%">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                </video>
+            </div>
+
+            <div id="youtube-player" class="hidden">
+                <iframe
+                    width="100%"
+                    height="400"
+                    src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                    title="Big Buck Bunny"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="description">
+                Chào mừng bạn đến với website xem hoạt hình trực tuyến.
+                Hãy chọn một bộ phim ở danh sách bên trái để xem.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Thế Giới Hoạt Hình. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function playMovie(type) {
+            let videoPlayer = document.getElementById("video-player");
+            let youtubePlayer = document.getElementById("youtube-player");
+            let title = document.getElementById("movie-title");
+            let movies = document.querySelectorAll(".movie");
+
+            movies.forEach(function(movie) {
+                movie.classList.remove("active");
+            });
+
+            event.currentTarget.classList.add("active");
+
+            if (type === "video") {
+                videoPlayer.style.display = "block";
+                youtubePlayer.style.display = "none";
+                title.textContent = "Phim hoạt hình mẫu";
+            } else {
+                videoPlayer.style.display = "none";
+                youtubePlayer.style.display = "block";
+                title.textContent = "Big Buck Bunny";
+            }
+        }
+    </script>
+
+</body>
+</html>
